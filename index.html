@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+        <h1 class="title">Registration Form</h1>
+        <form action="index.php" method="post" id="form" class="container__form">
+                <div class="data">
+                    <label class="label" for="name">Name:</label>
+                    <input class="input" type="text" id="name" name="name" placeholder="first name">
+                </div>
+                <div class="data">
+                    <label class="label" for="lastname">Last name:</label>
+                    <input class="input" type="text" id="lastname" name="lastname" placeholder="last name">
+                </div>
+                <div class="data">
+                    <label class="label" for="gender">Gender:</label>
+                    <div class="data__gender">
+                        <input class="type__radio" type="radio" name="gender" id="gender" value="male">Male
+                        <input class="type__radio" type="radio" name="gender" id="gender" value="female">Female
+                        <input class="type__radio" type="radio" name="gender" id="gender" value="undefined">I prefer not to say
+                    </div>
+                </div>
+                <div class="data">
+                    <label class="label" for="email">Email:</label>
+                    <input class="input" type="email" id="email" name="email" placeholder="email">
+                </div>
+                <div class="data">
+                    <label class="label" for="password">Password:</label>
+                    <input class="input" type="password" id="password" name="password" placeholder="password">
+                </div>
+                <div class="data">
+                    <label class="label" for="password">Confirm password:</label>
+                    <input class="input" type="password" id="confirm_password" placeholder="confirm password">
+                    <p class="message" id="message">Las contraseñas no coinciden</p>
+                </div>
+                <div class="data data__terms">
+                    <input type="checkbox" name="terms" id="terms">
+                    <label for="terms">I agree terms</label>
+                </div>
+                <input type="submit" id="submitButton" value= "Sign in" class="data submit">
+        </form>
+    <script src="js/validate.js"></script>
+    <script src="js/scripts.js"></script>
+</body>
+</html>

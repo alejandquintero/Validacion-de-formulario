@@ -1,0 +1,117 @@
+@font-face {
+    font-family: 'Geomanist';
+    src: url("/assets/fonts/Geomanist-ExtraLight.ttf");
+}
+
+*{
+    margin: 0;
+}
+
+body{
+    box-sizing: border-box;
+    background-color: #fefefe;
+    display: flex;
+    gap: 30px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #424b54;
+    font-family: 'Geomanist';
+}
+
+.title{
+    color: #fefefe;
+    margin: 0;
+}
+.container__form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 300px;
+    overflow: hidden;
+    background-color: #424b54;
+}
+
+
+@media screen and (min-width: 460px) {
+    .container__form{
+        width: 500px;
+    }
+}
+
+.data{
+    display: flex;
+    flex-direction: column;
+    gap: 10px; 
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+.data__gender{
+    display: flex;
+    gap: 15px;
+    justify-content: flex-start;
+    align-items:center;
+}
+
+.data__terms{
+    flex-direction: row;
+    justify-content: flex-start;
+    width: 200px;
+}
+
+.label{
+    color: #fefefe;
+}
+
+.input{
+    width: 100%;
+    background-color: #424b54;
+    border: none;
+    border-bottom: 2px solid #626972 ;
+    overflow: hidden;
+}
+
+.input:focus{
+    outline: none;
+    border-bottom: 2px solid royalblue; 
+}
+
+.submit{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    height: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #626972;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    transition: background-color .2s;
+}
+
+.submit:hover{
+    background-color: royalblue;
+}
+
+.message{
+    background-color: rgb(189, 85, 85);
+    padding: .5rem;
+    width: 300px;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+    display: none;
+}
+
+.message-show{
+    display: block;
+}
+
+
+
+
