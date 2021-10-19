@@ -98,17 +98,22 @@ body{
     background-color: royalblue;
 }
 
-.message{
+.data__message{
     background-color: rgb(189, 85, 85);
     padding: .5rem;
-    width: 300px;
+    width: 100%;
     margin-right: auto;
     margin-left: auto;
     text-align: center;
     display: none;
 }
 
-.message-show{
+.data__message--pass{
+    background-color:rgb(144, 184, 170);
+    display: block;
+}
+
+.data__message--error{
     display: block;
 }
 

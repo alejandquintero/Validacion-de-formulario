@@ -21,10 +21,10 @@
                 </div>
                 <div class="data">
                     <label class="label" for="gender">Gender:</label>
-                    <div class="data__gender">
-                        <input class="type__radio" type="radio" name="gender" id="gender" value="male">Male
-                        <input class="type__radio" type="radio" name="gender" id="gender" value="female">Female
-                        <input class="type__radio" type="radio" name="gender" id="gender" value="undefined">I prefer not to say
+                    <div class="data__gender" id="gender">
+                        <input class="type__radio" type="radio" name="gender" value="male">Male
+                        <input class="type__radio" type="radio" name="gender" value="female">Female
+                        <input class="type__radio" type="radio" name="gender" value="undefined">I prefer not to say
                     </div>
                 </div>
                 <div class="data">
@@ -34,11 +34,12 @@
                 <div class="data">
                     <label class="label" for="password">Password:</label>
                     <input class="input" type="password" id="password" name="password" placeholder="password">
+                    <p class="data__message" id="message_pass_contain">La contraseña debe tener al menos 8 caracteres que incluyan una letra en mayúscula, un número y un carácter especial.</p>
                 </div>
                 <div class="data">
                     <label class="label" for="password">Confirm password:</label>
                     <input class="input" type="password" id="confirm_password" placeholder="confirm password">
-                    <p class="message" id="message">Las contraseñas no coinciden</p>
+                    <p class="data__message" id="message_pass_error">Las contraseñas no coinciden</p>
                 </div>
                 <div class="data data__terms">
                     <input type="checkbox" name="terms" id="terms">

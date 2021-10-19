@@ -7,7 +7,8 @@ const email = document.getElementById('email')
 const password = document.getElementById('password')
 const confirm_password = document.getElementById('confirm_password')
 const terms = document.getElementById('terms')
-const message = document.getElementById('message')
+const message_pass_error = document.getElementById('message_pass_error')
+const message_pass_contain = document.getElementById('message_pass_contain')
 
 const formValid = {
     name: false,
@@ -21,6 +22,7 @@ const formValid = {
 
 form.addEventListener('submit', (e)=>{
     e.preventDefault()
+    const 
 })
 
 name_user.addEventListener('change', ()=>{
@@ -37,7 +39,6 @@ lastname.addEventListener('change', ()=>{
 
 gender.addEventListener('change', (e)=>{
     formValid.gender = e.target.checked
-    console.log(e)
 })
 
 email.addEventListener('change', ()=>{
@@ -47,22 +48,29 @@ email.addEventListener('change', ()=>{
     }
 })
 
-password.addEventListener('change', ()=>{
+password.addEventListener('keyup', ()=>{
     const validate_pass = validatePasswordComplex(password.value)
+    message_pass_contain.classList.add('data__message--pass')
     if(validate_pass === true){
         formValid.password = true
+        message_pass_contain.classList.remove('data__message--pass')
     }
 })
 
 confirm_password.addEventListener('keyup', ()=>{
     if (password.value === confirm_password.value){
         formValid.confirm_password = true
-        message.classList.remove('message-show')
+        message_pass_error.classList.remove('data__message--error')
     }else{
-        message.classList.add('message-show')
+        message_pass_error.classList.add('data__message--error')
     }
 })
 
+terms.addEventListener('change', ()=>{
+    if(terms.checked === true){
+        formValid.terms = true
+    }
+})
 
 
 
