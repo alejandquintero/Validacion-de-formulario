@@ -10,7 +10,7 @@
 </head>
 <body>
         <h1 class="title">Registration Form</h1>
-        <form action="index.php" method="post" id="form" class="container__form">
+        <form action="php/index.php" method="post" id="form" class="container__form">
                 <div class="data">
                     <label class="label" for="name">Name:</label>
                     <input class="input" type="text" id="name" name="name" placeholder="first name">
@@ -22,9 +22,9 @@
                 <div class="data">
                     <label class="label" for="gender">Gender:</label>
                     <div class="data__gender" id="gender">
-                        <input class="type__radio" type="radio" name="gender" value="male">Male
-                        <input class="type__radio" type="radio" name="gender" value="female">Female
-                        <input class="type__radio" type="radio" name="gender" value="undefined">I prefer not to say
+                        <input class="type__radio" type="radio" name="gender" value="M">Male
+                        <input class="type__radio" type="radio" name="gender" value="F">Female
+                        <input class="type__radio" type="radio" name="gender" value="U">I prefer not to say
                     </div>
                 </div>
                 <div class="data">
@@ -46,7 +46,10 @@
                     <label for="terms">I agree terms</label>
                 </div>
                 <input type="submit" id="submitButton" value= "Sign in" class="data submit">
+                <p class="data__message" id="message_sign_error">El correo eléctronico proporcionado ya se encuentra registrado.</p>
+
         </form>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="js/validate.js"></script>
     <script src="js/scripts.js"></script>
 </body>
