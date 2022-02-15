@@ -1,0 +1,9 @@
+{
+    "conexion":{
+        "server": "localhost",
+        "user": "nano",
+        "password": "123456",
+        "database": "apirest",
+        "port": "3306"
+    }
+}

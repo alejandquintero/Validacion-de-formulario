@@ -117,6 +117,39 @@ body{
     display: block;
 }
 
+.section{
+     box-sizing: border-box;
+    background-color: #fefefe;
+    display: flex;
+    gap: 30px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #424b54;
+    font-family: 'Geomanist';
+    transition: opacity .5s;
+}
 
+.success{
+    background-color: #58ff9e;
+    width: 300px;
+    height: 100px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 20px;
+    position: absolute;
+    transform: scale(0);
+    transition: transform .5s;
+}
 
+.section--hide{
+    opacity: .1;
+}
 
+.success--show{
+    transform: scale(1);
+}

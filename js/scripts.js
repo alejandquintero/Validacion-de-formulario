@@ -11,6 +11,7 @@ const message_pass_error = document.getElementById('message_pass_error')
 const message_pass_contain = document.getElementById('message_pass_contain')
 const message_sign_error = document.getElementById('message_sign_error')
 
+let resultado
 
 const formValid = {
     name: false,
@@ -97,24 +98,47 @@ const errorSignIn = () =>{
     message_sign_error.classList.add('data__message--error')
 }
 
+
+
 submit.addEventListener('click', ()=>{
-    axios({
-        method:'POST',
-        url:'../php/index.php',
-        data: {
-            name_user: formData.name,
-            lastname: formData.lastname,
-            gender: formData.gender,
-            email: formData.email,
-            password: formData.password,
-        }
-    })
-        .then(res=>console.log(res))
-        .catch(err => console.log(err))
-    
+
+    const api = async (url) =>{
+        
+        const response = await axios ({
+            method:'POST',
+            url: url,
+            data: JSON.stringify(formData)
+        })
+
+            console.log(response)
+
+        // if(response.data.status === "ok") {
+
+        //     const back = document.getElementById('section')
+        //     const front = document.getElementById('success')
+
+        //     back.classList.toggle('section--hide')
+        //     front.classList.toggle('success--show')
+        //     console.log("hola")
+
+        // }else{
+        //     console.log(response.data)
+        // }
+    }
+
+
+    api('../formulario/php/CRUD_usuario.php')
+
+
 })
 
 
 
 
-
+/*data: {
+    name_user: formData.name,
+    lastname: formData.lastname,
+    gender: formData.gender,
+    email: formData.email,
+    password: formData.password,
+}*/

@@ -10,4 +10,6 @@
     // $query = "SELECT * FROM usuario WHERE idusuario= '3'";
     // var_dump($conexion->obtenerDatos($query));
 
+    
+
 ?>
